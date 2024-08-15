@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>映画一覧</title>
+  </head>
+  <body>
+    <h1>映画一覧</h1>
+
+    <% @movies.each do |movie| %>
+      <div>
+        <h2><%= movie.name %></h2>
+        <p><%= movie.year %></p>
+        <p><%= movie.description %></p>
+        <img src="<%= movie.image_url || 'https://picsum.photos/200' %>" alt="<%= movie.name %>">
+      </div>
+    <% end %>
+
+  </body>
+</html>
